@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: ['@babel/polyfill', './src/index.js'], // add babel-polyfill for Promise and weakmap built-in fun
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',

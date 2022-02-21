@@ -1,16 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { store } from './store';
+import App from './containers/App';
 
-function App() {
-  const [first, setfirst] = useState(0);
-  return (
-    <div>
-      render App
-      <button type="button" onClick={() => setfirst(first + 1)}>
-        onlick
-      </button>
-      <p>{first}</p>
-    </div>
-  );
-}
-ReactDOM.render(<App />, document.querySelector('#root'));
+ReactDOM.render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>,
+  document.querySelector('#root')
+);
