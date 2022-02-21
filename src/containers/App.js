@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
+
+import { Footer, Header, List, SearchHeader } from '../components/layouts';
 
 function App() {
-  const [first, setfirst] = useState(0);
   return (
     <div>
-      render App
-      <button type="button" onClick={() => setfirst(first + 1)}>
-        onlick
-      </button>
-      <p>{first}</p>
+      <Header />
+      <SearchHeader />
+      <List />   
+      <Footer />                     
     </div>
   );
 }
