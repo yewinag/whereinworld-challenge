@@ -9,7 +9,8 @@
     "start": "webpack-dev-server --mode=development --open",
     "lint": "eslint 'src/**/*.js'",
     "lint-fix": "npm run lint --fix",
-    "test": "jest --env=jsdom --watch"
+    "test": "jest --env=jsdom --watch",
+    "style-lint": "npx stylelint '**/*.scss'"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.7.2",
@@ -43,7 +44,14 @@
     "postcss": "^8.4.6",
     "postcss-loader": "^6.2.1",
     "prettier": "2.5.1",
+    "sass": "^1.49.8",
+    "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
+    "stylelint": "^14.5.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-prettier-scss": "^0.0.1",
+    "stylelint-config-standard": "^25.0.0",
+    "stylelint-config-standard-scss": "^3.0.0",
     "url-loader": "^4.1.1",
     "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2",
