@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+const StylelintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
   entry: ['@babel/polyfill', './src/index.js'], // add babel-polyfill for Promise and weakmap built-in fun
@@ -36,6 +37,18 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.s[ac]ss$/i,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
     ],
   },
   plugins: [
@@ -47,5 +60,6 @@ module.exports = {
     new Dotenv({
       path: './.env',
     }),
+    new StylelintPlugin(),
   ],
 };

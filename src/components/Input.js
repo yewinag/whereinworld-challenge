@@ -1,7 +1,11 @@
 import React from 'react';
 
 function Input() {
-  return <div>Input</div>;
+  return (
+    <div>
+      <input className="input" placeholder="Search for a country ..." />
+    </div>
+  );
 }
 
 export default Input;

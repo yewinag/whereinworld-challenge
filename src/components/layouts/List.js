@@ -8,11 +8,23 @@ function List() {
 
   const sliceData = data !== undefined ? data.slice(0, 8) : [];
   return (
-    <article>
+    <article className="listing">
       {isLoading && <p>loading.....</p>}
-      {sliceData.map((item) => (
-        <Card item={item} key={item.area} />
-      ))}
+      <section className="listing-layout">
+        {sliceData.map((item) => (
+          <Card item={item} key={item.area} />
+        ))}
+        {/* 
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card /> */}
+      </section>
+
       {error && <Error error={error} />}
     </article>
   );
