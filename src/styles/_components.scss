@@ -1,0 +1,98 @@
+/* common used button style */
+.btn {
+  background-color: inherit;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid transparent;
+  justify-content: space-between;
+
+  img {
+    height: 1rem;
+    padding-right: 0.4rem;
+  }
+
+  &:focus-visible {
+    outline: 0;
+  }
+
+  &:active {
+    background-color: $color-primary-dark;
+    border-color: inherit;
+  }
+}
+
+/* input style */
+.input {
+  background: $color-primary-dark;
+  border-color: $color-primary-dark;
+  height: $regular-height;
+  border: 1px solid $txt-color-dark;
+  border-radius: $ele-radius;
+  padding: 0.4rem 1.2rem;
+  min-width: $input-min-width;
+  color: inherit;
+
+  &:focus-visible {
+    border-color: $color-primary-dark;
+    outline: 0;
+  }
+
+  &::placeholder {
+    color: inherit;
+  }
+}
+
+/* dropdown style */
+.dropdown {
+  position: relative;
+
+  .btn-dropdown {
+    background-color: $color-primary-dark;
+    padding: 0.4rem 1rem;
+    height: $regular-height;
+    min-width: $dropdown-width;
+    border-radius: $ele-radius;
+  }
+
+  ul {
+    display: none;
+    list-style: none;
+    width: 100%;
+    background: $color-primary-dark;
+    padding: 0.6rem 1rem;
+    margin: 0.2rem 0;
+
+    &.active {
+      position: absolute;
+      display: block;
+    }
+
+    li {
+      padding: 0.2rem 0;
+    }
+  }
+}
+
+/* card element */
+.item-card {
+  background-color: $color-primary-dark;
+
+  img {
+    width: 100%;
+    height: 40%;
+  }
+
+  .card-desc {
+    padding: 1.2rem;
+
+    h4 {
+      padding: 1rem 0;
+    }
+
+    p {
+      margin: 0.6rem 0;
+    }
+  }
+}

@@ -4,7 +4,7 @@ import Input from '../Input';
 
 function SearchHeader() {
   return (
-    <nav>
+    <nav className="header-search">
       <header>
         <Input />
       </header>

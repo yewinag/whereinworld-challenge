@@ -3,7 +3,7 @@ import { Footer, Header, List, SearchHeader } from '../components/layouts';
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <Header />
       <SearchHeader />
       <List />   
