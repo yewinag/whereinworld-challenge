@@ -20,7 +20,6 @@ function List() {
     <article className="listing">
       <h3>yewin</h3>
       {loading && <p role="alert">loading.....</p>}
-      {/* <p role="alert">loading.....</p> */}
       <section className="listing-layout">
         {list?.map((item) => (
           <Card item={item} key={item.area} />

@@ -1,5 +1,5 @@
 import { API } from '../../config/constants';
-import 'babel-polyfill';
+// import 'babel-polyfill';
 
 const getApiUrl = (path) => `${API}${path}`;
 
