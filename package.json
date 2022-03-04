@@ -19,7 +19,8 @@
     "babel-preset-stage-0": "^6.24.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-redux": "^7.2.6"
+    "react-redux": "^7.2.6",
+    "msw": "^0.38.2"
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",
@@ -44,7 +45,9 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "jest": "^27.5.1",
-    "msw": "^0.38.2",
+    "jest-fetch-mock": "^3.0.3",
+    "jest-mock-fetch": "^2.0.5",
+    "node-fetch": "^3.2.1",
     "postcss": "^8.4.6",
     "postcss-loader": "^6.2.1",
     "prettier": "2.5.1",
