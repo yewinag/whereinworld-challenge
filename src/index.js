@@ -1,8 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { store } from './store';
+import App from './containers/App';
+import './styles/main.scss';
+import { worker } from './mocks/browser';
 
-function App() {
-  return <div>render App</div>;
+if (process.env.NODE_ENV === 'development') {
+  worker.start();
 }
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+ReactDOM.render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>,
+  document.querySelector('#root')
+);
