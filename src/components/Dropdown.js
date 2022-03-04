@@ -12,7 +12,7 @@ function Dropdown() {
         className="btn-dropdown"
         rightIcon={<img src={dropdownIcon} alt="dropdown-icon" />}
       />
-      <ul className={show && 'active'}>
+      <ul className={show ? 'active' : ''}>
         {['Africa', 'Amercia', 'Asia', 'Europe', 'Oceania'].map((item) => (
           <li key={item}>{item}</li>
         ))}
